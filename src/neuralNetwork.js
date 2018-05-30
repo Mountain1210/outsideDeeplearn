@@ -9,17 +9,21 @@ import {
 } from 'deeplearn';
 
 // Encapsulates math operations on the CPU and GPU.
+// 在CPU和GPU上封装数学运算。
 const math = new NDArrayMathGPU();
 
 class ColorAccessibilityModel {
   // Runs training.
+  // 进行训练
   session;
 
   // An optimizer with a certain initial learning rate. Used for training.
+  // 具有一定初始学习率的优化器。用于训练
   initialLearningRate = 0.06;
   optimizer;
 
   // Each training batch will be on this many examples.
+  // 每个训练一批将变成他的实例
   batchSize = 300;
 
   inputTensor;
@@ -28,6 +32,7 @@ class ColorAccessibilityModel {
   predictionTensor;
 
   // Maps tensors to InputProviders.
+  // 将张量映射到输入提供者
   feedEntries;
 
   constructor() {
